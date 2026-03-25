@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<robot name="quadruped">
+  
+  <!-- 材料定义 -->
+  <material name="blue">
+    <color rgba="0.2 0.5 0.8 1"/>
+  </material>
+  <material name="red">
+    <color rgba="0.8 0.2 0.2 1"/>
+  </material>
+  <material name="dark_red">
+    <color rgba="0.6 0.1 0.1 1"/>
+  </material>
+  <material name="gray">
+    <color rgba="0.5 0.5 0.5 1"/>
+  </material>
+  
+  <!-- 机身 -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.45 0.25 0.12"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+  </link>
+  
+  <!-- ================= 前左腿 (FL) ================= -->
+  <!-- 大腿 -->
+  <link name="FL_thigh">
+    <visual>
+      <geometry>
+        <box size="0.06 0.06 0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="FL_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="FL_thigh"/>
+    <origin xyz="0.18 0.1 0.02"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <!-- 小腿 -->
+  <link name="FL_calf">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.14"/>
+      </geometry>
+      <origin xyz="0 0 -0.07" rpy="0 0 0"/>
+      <material name="dark_red"/>
+    </visual>
+  </link>
+  
+  <joint name="FL_knee" type="revolute">
+    <parent link="FL_thigh"/>
+    <child link="FL_calf"/>
+    <origin xyz="0 0 -0.18"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <!-- 足端 -->
+  <link name="FL_foot">
+    <visual>
+      <geometry>
+        <sphere radius="0.03"/>
+      </geometry>
+      <origin xyz="0 0 -0.07"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+  
+  <joint name="FL_ankle" type="fixed">
+    <parent link="FL_calf"/>
+    <child link="FL_foot"/>
+    <origin xyz="0 0 -0.14"/>
+  </joint>
+  
+  <!-- ================= 前右腿 (FR) ================= -->
+  <link name="FR_thigh">
+    <visual>
+      <geometry>
+        <box size="0.06 0.06 0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="FR_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="FR_thigh"/>
+    <origin xyz="0.18 -0.1 0.02"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FR_calf">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.14"/>
+      </geometry>
+      <origin xyz="0 0 -0.07" rpy="0 0 0"/>
+      <material name="dark_red"/>
+    </visual>
+  </link>
+  
+  <joint name="FR_knee" type="revolute">
+    <parent link="FR_thigh"/>
+    <child link="FR_calf"/>
+    <origin xyz="0 0 -0.18"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FR_foot">
+    <visual>
+      <geometry>
+        <sphere radius="0.03"/>
+      </geometry>
+      <origin xyz="0 0 -0.07"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+  
+  <joint name="FR_ankle" type="fixed">
+    <parent link="FR_calf"/>
+    <child link="FR_foot"/>
+    <origin xyz="0 0 -0.14"/>
+  </joint>
+  
+  <!-- ================= 后左腿 (RL) ================= -->
+  <link name="RL_thigh">
+    <visual>
+      <geometry>
+        <box size="0.06 0.06 0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="RL_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="RL_thigh"/>
+    <origin xyz="-0.18 0.1 0.02"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RL_calf">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.14"/>
+      </geometry>
+      <origin xyz="0 0 -0.07" rpy="0 0 0"/>
+      <material name="dark_red"/>
+    </visual>
+  </link>
+  
+  <joint name="RL_knee" type="revolute">
+    <parent link="RL_thigh"/>
+    <child link="RL_calf"/>
+    <origin xyz="0 0 -0.18"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RL_foot">
+    <visual>
+      <geometry>
+        <sphere radius="0.03"/>
+      </geometry>
+      <origin xyz="0 0 -0.07"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+  
+  <joint name="RL_ankle" type="fixed">
+    <parent link="RL_calf"/>
+    <child link="RL_foot"/>
+    <origin xyz="0 0 -0.14"/>
+  </joint>
+  
+  <!-- ================= 后右腿 (RR) ================= -->
+  <link name="RR_thigh">
+    <visual>
+      <geometry>
+        <box size="0.06 0.06 0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="RR_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="RR_thigh"/>
+    <origin xyz="-0.18 -0.1 0.02"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RR_calf">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.14"/>
+      </geometry>
+      <origin xyz="0 0 -0.07" rpy="0 0 0"/>
+      <material name="dark_red"/>
+    </visual>
+  </link>
+  
+  <joint name="RR_knee" type="revolute">
+    <parent link="RR_thigh"/>
+    <child link="RR_calf"/>
+    <origin xyz="0 0 -0.18"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RR_foot">
+    <visual>
+      <geometry>
+        <sphere radius="0.03"/>
+      </geometry>
+      <origin xyz="0 0 -0.07"/>
+      <material name="gray"/>
+    </visual>
+  </link>
+  
+  <joint name="RR_ankle" type="fixed">
+    <parent link="RR_calf"/>
+    <child link="RR_foot"/>
+    <origin xyz="0 0 -0.14"/>
+  </joint>
+  
+</robot>

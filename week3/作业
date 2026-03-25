@@ -1,0 +1,117 @@
+#1.ROS2的通信机制是基于瞬时消息的，不是持久的连接。
+#2.直行时间12秒，如果加上转弯≈16.71秒
+3.#!/usr/bin/env python3
+"""
+"""
+
+import rclpy
+from rclpy.node import Node
+from geometry_msgs.msg import Twist
+import time
+import math
+
+
+class RectangleMover(Node):
+    """走长方形的控制节点"""
+
+    def __init__(self):
+        super().__init__('rectangle_mover')
+
+        # 创建发布者
+        self.cmd_vel_pub = self.create_publisher(
+            Twist,
+            '/turtle1/cmd_vel',
+            10
+        )
+
+        # ============ 参数设置 ============
+        self.SPEED = 1.0              # 线速度 m/s
+        self.TURN_SPEED = 1.0          # 角速度 rad/s
+        self.LONG_SIDE = 3.0           # 长边 3米
+        self.SHORT_SIDE = 2.0          # 短边 2米
+        
+        # 计算移动时间
+        self.LONG_MOVE_TIME = self.LONG_SIDE / self.SPEED
+        self.SHORT_MOVE_TIME = self.SHORT_SIDE / self.SPEED
+        self.TURN_TIME = 1.57 / self.TURN_SPEED  # 转弯90度
+
+        self.get_logger().info('📏 长方形控制器初始化完成')
+        self.get_logger().info(f'📐 长边: {self.LONG_SIDE}m, 短边: {self.SHORT_SIDE}m')
+        self.get_logger().info(f'⏱️ 长边时间: {self.LONG_MOVE_TIME:.2f}s, 短边时间: {self.SHORT_MOVE_TIME:.2f}s')
+
+    def move_straight(self, duration, side_name):
+        """直行指定时间"""
+        self.get_logger().info(f'➡️ 正在直行({side_name})...')
+
+        msg = Twist()
+        msg.linear.x = self.SPEED
+        msg.angular.z = 0.0
+
+        start_time = time.time()
+        while time.time() - start_time < duration:
+            self.cmd_vel_pub.publish(msg)
+            time.sleep(0.01)
+
+        # 停止
+        self.stop()
+        self.get_logger().info(f'✅ {side_name}直行完成')
+
+    def turn(self):
+        """旋转90度"""
+        self.get_logger().info('🔄 正在转弯(90°)...')
+
+        msg = Twist()
+        msg.linear.x = 0.0
+        msg.angular.z = self.TURN_SPEED
+
+        start_time = time.time()
+        while time.time() - start_time < self.TURN_TIME:
+            self.cmd_vel_pub.publish(msg)
+            time.sleep(0.01)
+
+        # 停止
+        self.stop()
+        self.get_logger().info('✅ 转弯完成')
+
+    def stop(self):
+        """停止运动"""
+        msg = Twist()
+        msg.linear.x = 0.0
+        msg.angular.z = 0.0
+        self.cmd_vel_pub.publish(msg)
+        time.sleep(0.1)
+
+    def run(self):
+        """执行走长方形"""
+        self.get_logger().info('📏 开始走长方形！')
+        self.get_logger().info('=' * 30)
+
+        for i in range(4):
+            if i % 2 == 0:  # 偶数边：0,2 是长边
+                self.move_straight(self.LONG_MOVE_TIME, f"长边")
+            else:  # 奇数边：1,3 是短边
+                self.move_straight(self.SHORT_MOVE_TIME, f"短边")
+            
+            if i < 3:  # 最后一次不需要再转弯
+                self.turn()
+
+        self.get_logger().info('=' * 30)
+        self.get_logger().info('🎉 长方形走完！回到起点！')
+
+
+def main(args=None):
+    rclpy.init(args=args)
+    node = RectangleMover()
+
+    try:
+        node.run()
+    except KeyboardInterrupt:
+        node.get_logger().info('⚠️ 用户中断')
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
+        print("程序结束")
+
+
+if __name__ == '__main__':
+    main()

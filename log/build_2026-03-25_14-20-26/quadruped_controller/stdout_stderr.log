@@ -1,0 +1,28 @@
+running develop
+running egg_info
+creating quadruped_controller.egg-info
+writing quadruped_controller.egg-info/PKG-INFO
+writing dependency_links to quadruped_controller.egg-info/dependency_links.txt
+writing entry points to quadruped_controller.egg-info/entry_points.txt
+writing requirements to quadruped_controller.egg-info/requires.txt
+writing top-level names to quadruped_controller.egg-info/top_level.txt
+writing manifest file 'quadruped_controller.egg-info/SOURCES.txt'
+reading manifest file 'quadruped_controller.egg-info/SOURCES.txt'
+writing manifest file 'quadruped_controller.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped-controller.egg-link (link to .)
+Installing controller script to /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/quadruped_controller
+
+Installed /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller
+running symlink_data
+creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/ament_index
+creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/ament_index/resource_index
+creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/ament_index/resource_index/packages
+symbolically linking /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/resource/quadruped_controller -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/ament_index/resource_index/packages
+symbolically linking /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/package.xml -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller
+creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+symbolically linking /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/urdf/quadruped.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/launch
+symbolically linking /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/launch/display_quadruped.launch.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/launch
+creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/config
+symbolically linking /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/config/quadruped.rviz -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/config

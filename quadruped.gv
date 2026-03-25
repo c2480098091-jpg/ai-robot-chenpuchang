@@ -1,0 +1,41 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"FL_thigh_link" [label="FL_thigh_link"];
+"FL_calf_link" [label="FL_calf_link"];
+"FL_foot_link" [label="FL_foot_link"];
+"FR_thigh_link" [label="FR_thigh_link"];
+"FR_calf_link" [label="FR_calf_link"];
+"FR_foot_link" [label="FR_foot_link"];
+"RL_thigh_link" [label="RL_thigh_link"];
+"RL_calf_link" [label="RL_calf_link"];
+"RL_foot_link" [label="RL_foot_link"];
+"RR_thigh_link" [label="RR_thigh_link"];
+"RR_calf_link" [label="RR_calf_link"];
+"RR_foot_link" [label="RR_foot_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "FL_hip_joint" [label="xyz: 0.18 0.12 0.02 \nrpy: 0 -0 0"]
+"FL_hip_joint" -> "FL_thigh_link"
+"FL_thigh_link" -> "FL_thigh_joint" [label="xyz: 0 0 -0.18 \nrpy: 0 -0 0"]
+"FL_thigh_joint" -> "FL_calf_link"
+"FL_calf_link" -> "FL_calf_joint" [label="xyz: 0 0 -0.16 \nrpy: 0 -0 0"]
+"FL_calf_joint" -> "FL_foot_link"
+"base_link" -> "FR_hip_joint" [label="xyz: 0.18 -0.12 0.02 \nrpy: 0 -0 0"]
+"FR_hip_joint" -> "FR_thigh_link"
+"FR_thigh_link" -> "FR_thigh_joint" [label="xyz: 0 0 -0.18 \nrpy: 0 -0 0"]
+"FR_thigh_joint" -> "FR_calf_link"
+"FR_calf_link" -> "FR_calf_joint" [label="xyz: 0 0 -0.16 \nrpy: 0 -0 0"]
+"FR_calf_joint" -> "FR_foot_link"
+"base_link" -> "RL_hip_joint" [label="xyz: -0.18 0.12 0.02 \nrpy: 0 -0 0"]
+"RL_hip_joint" -> "RL_thigh_link"
+"RL_thigh_link" -> "RL_thigh_joint" [label="xyz: 0 0 -0.18 \nrpy: 0 -0 0"]
+"RL_thigh_joint" -> "RL_calf_link"
+"RL_calf_link" -> "RL_calf_joint" [label="xyz: 0 0 -0.16 \nrpy: 0 -0 0"]
+"RL_calf_joint" -> "RL_foot_link"
+"base_link" -> "RR_hip_joint" [label="xyz: -0.18 -0.12 0.02 \nrpy: 0 -0 0"]
+"RR_hip_joint" -> "RR_thigh_link"
+"RR_thigh_link" -> "RR_thigh_joint" [label="xyz: 0 0 -0.18 \nrpy: 0 -0 0"]
+"RR_thigh_joint" -> "RR_calf_link"
+"RR_calf_link" -> "RR_calf_joint" [label="xyz: 0 0 -0.16 \nrpy: 0 -0 0"]
+"RR_calf_joint" -> "RR_foot_link"
+}
