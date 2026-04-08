@@ -1,0 +1,54 @@
+running develop
+Removing /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped-controller.egg-link (link to .)
+running egg_info
+writing ../build/quadruped_controller/quadruped_controller.egg-info/PKG-INFO
+writing dependency_links to ../build/quadruped_controller/quadruped_controller.egg-info/dependency_links.txt
+writing entry points to ../build/quadruped_controller/quadruped_controller.egg-info/entry_points.txt
+writing requirements to ../build/quadruped_controller/quadruped_controller.egg-info/requires.txt
+writing top-level names to ../build/quadruped_controller/quadruped_controller.egg-info/top_level.txt
+reading manifest file '../build/quadruped_controller/quadruped_controller.egg-info/SOURCES.txt'
+writing manifest file '../build/quadruped_controller/quadruped_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build
+creating /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib
+creating /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+copying quadruped_controller/kinematics.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+copying quadruped_controller/move_robot.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+copying quadruped_controller/gait_generator.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+copying quadruped_controller/real_gait.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+copying quadruped_controller/__init__.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+copying quadruped_controller/balance_controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+copying quadruped_controller/controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+running install
+running install_lib
+creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/kinematics.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/move_robot.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/gait_generator.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/real_gait.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/__init__.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/balance_controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/kinematics.py to kinematics.cpython-310.pyc
+byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/move_robot.py to move_robot.cpython-310.pyc
+byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/gait_generator.py to gait_generator.cpython-310.pyc
+byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/real_gait.py to real_gait.cpython-310.pyc
+byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/__init__.py to __init__.cpython-310.pyc
+byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/balance_controller.py to balance_controller.cpython-310.pyc
+byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/controller.py to controller.cpython-310.pyc
+running install_data
+copying resource/quadruped_controller -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller
+copying urdf/test.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+copying urdf/quadruped.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+copying urdf/quadruped_complete.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+copying urdf/quadruped_real.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+copying urdf/quadruped_working.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+copying launch/display_quadruped.launch.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/launch
+copying config/quadruped.rviz -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/config
+running install_egg_info
+Copying ../build/quadruped_controller/quadruped_controller.egg-info to /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller-0.0.0-py3.10.egg-info
+running install_scripts
+Installing controller script to /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/quadruped_controller
+writing list of installed files to '/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/install.log'

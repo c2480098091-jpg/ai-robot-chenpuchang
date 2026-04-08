@@ -1,1 +1,271 @@
-/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/urdf/quadruped.urdf
+<?xml version="1.0"?>
+<robot name="quadruped">
+  
+  <!-- 材料定义 -->
+  <material name="body_blue">
+    <color rgba="0.2 0.5 0.8 1.0"/>
+  </material>
+  <material name="leg_red">
+    <color rgba="0.8 0.2 0.2 1.0"/>
+  </material>
+  <material name="joint_black">
+    <color rgba="0.1 0.1 0.1 1.0"/>
+  </material>
+  <material name="foot_black">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+  
+  <!-- 机身主体 -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.4 0.2 0.12"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="body_blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.4 0.2 0.12"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="2.5"/>
+      <inertia ixx="0.1" ixy="0" ixz="0" iyy="0.1" iyz="0" izz="0.1"/>
+    </inertial>
+  </link>
+  
+  <!-- 前左腿 (FL) -->
+  <joint name="FL_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="FL_thigh_link"/>
+    <origin xyz="0.18 0.12 0.02" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+    <dynamics damping="0.1" friction="0.01"/>
+  </joint>
+  
+  <link name="FL_thigh_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+    <inertial>
+      <mass value="0.3"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  
+  <joint name="FL_thigh_joint" type="revolute">
+    <parent link="FL_thigh_link"/>
+    <child link="FL_calf_link"/>
+    <origin xyz="0 0 -0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="1.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FL_calf_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.16"/>
+      </geometry>
+      <origin xyz="0 0 -0.08" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="0.0005" ixy="0" ixz="0" iyy="0.0005" iyz="0" izz="0.0005"/>
+    </inertial>
+  </link>
+  
+  <joint name="FL_calf_joint" type="revolute">
+    <parent link="FL_calf_link"/>
+    <child link="FL_foot_link"/>
+    <origin xyz="0 0 -0.16" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FL_foot_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <material name="foot_black"/>
+    </visual>
+  </link>
+  
+  <!-- 前右腿 (FR) -->
+  <joint name="FR_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="FR_thigh_link"/>
+    <origin xyz="0.18 -0.12 0.02" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FR_thigh_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+    <inertial>
+      <mass value="0.3"/>
+      <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+    </inertial>
+  </link>
+  
+  <joint name="FR_thigh_joint" type="revolute">
+    <parent link="FR_thigh_link"/>
+    <child link="FR_calf_link"/>
+    <origin xyz="0 0 -0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="1.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FR_calf_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.16"/>
+      </geometry>
+      <origin xyz="0 0 -0.08" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+  </link>
+  
+  <joint name="FR_calf_joint" type="revolute">
+    <parent link="FR_calf_link"/>
+    <child link="FR_foot_link"/>
+    <origin xyz="0 0 -0.16" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FR_foot_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <material name="foot_black"/>
+    </visual>
+  </link>
+  
+  <!-- 后左腿 (RL) -->
+  <joint name="RL_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="RL_thigh_link"/>
+    <origin xyz="-0.18 0.12 0.02" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RL_thigh_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+  </link>
+  
+  <joint name="RL_thigh_joint" type="revolute">
+    <parent link="RL_thigh_link"/>
+    <child link="RL_calf_link"/>
+    <origin xyz="0 0 -0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="1.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RL_calf_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.16"/>
+      </geometry>
+      <origin xyz="0 0 -0.08" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+  </link>
+  
+  <joint name="RL_calf_joint" type="revolute">
+    <parent link="RL_calf_link"/>
+    <child link="RL_foot_link"/>
+    <origin xyz="0 0 -0.16" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RL_foot_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <material name="foot_black"/>
+    </visual>
+  </link>
+  
+  <!-- 后右腿 (RR) -->
+  <joint name="RR_hip_joint" type="revolute">
+    <parent link="base_link"/>
+    <child link="RR_thigh_link"/>
+    <origin xyz="-0.18 -0.12 0.02" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RR_thigh_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.03" length="0.18"/>
+      </geometry>
+      <origin xyz="0 0 -0.09" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+  </link>
+  
+  <joint name="RR_thigh_joint" type="revolute">
+    <parent link="RR_thigh_link"/>
+    <child link="RR_calf_link"/>
+    <origin xyz="0 0 -0.18" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="1.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RR_calf_link">
+    <visual>
+      <geometry>
+        <cylinder radius="0.025" length="0.16"/>
+      </geometry>
+      <origin xyz="0 0 -0.08" rpy="1.57 0 0"/>
+      <material name="leg_red"/>
+    </visual>
+  </link>
+  
+  <joint name="RR_calf_joint" type="revolute">
+    <parent link="RR_calf_link"/>
+    <child link="RR_foot_link"/>
+    <origin xyz="0 0 -0.16" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.5" upper="0.5" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RR_foot_link">
+    <visual>
+      <geometry>
+        <sphere radius="0.025"/>
+      </geometry>
+      <origin xyz="0 0 -0.03" rpy="0 0 0"/>
+      <material name="foot_black"/>
+    </visual>
+  </link>
+  
+</robot>

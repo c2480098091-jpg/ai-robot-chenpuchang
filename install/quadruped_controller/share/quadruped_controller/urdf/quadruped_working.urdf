@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<robot name="quadruped">
+  
+  <!-- 材料定义 -->
+  <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+  
+  <!-- 机身 -->
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.4 0.2 0.1"/>
+      </geometry>
+      <material name="blue"/>
+    </visual>
+  </link>
+  
+  <!-- 前左腿大腿 -->
+  <link name="FL_thigh">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.15"/>
+      </geometry>
+      <origin xyz="0 0 -0.075" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <!-- 前左腿髋关节 -->
+  <joint name="FL_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="FL_thigh"/>
+    <origin xyz="0.15 0.1 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <!-- 前左腿小腿 -->
+  <link name="FL_calf">
+    <visual>
+      <geometry>
+        <box size="0.04 0.04 0.12"/>
+      </geometry>
+      <origin xyz="0 0 -0.06" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <!-- 前左腿膝关节 -->
+  <joint name="FL_knee" type="revolute">
+    <parent link="FL_thigh"/>
+    <child link="FL_calf"/>
+    <origin xyz="0 0 -0.15"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <!-- 前右腿 -->
+  <link name="FR_thigh">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.15"/>
+      </geometry>
+      <origin xyz="0 0 -0.075" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="FR_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="FR_thigh"/>
+    <origin xyz="0.15 -0.1 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="FR_calf">
+    <visual>
+      <geometry>
+        <box size="0.04 0.04 0.12"/>
+      </geometry>
+      <origin xyz="0 0 -0.06" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="FR_knee" type="revolute">
+    <parent link="FR_thigh"/>
+    <child link="FR_calf"/>
+    <origin xyz="0 0 -0.15"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <!-- 后左腿 -->
+  <link name="RL_thigh">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.15"/>
+      </geometry>
+      <origin xyz="0 0 -0.075" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="RL_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="RL_thigh"/>
+    <origin xyz="-0.15 0.1 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RL_calf">
+    <visual>
+      <geometry>
+        <box size="0.04 0.04 0.12"/>
+      </geometry>
+      <origin xyz="0 0 -0.06" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="RL_knee" type="revolute">
+    <parent link="RL_thigh"/>
+    <child link="RL_calf"/>
+    <origin xyz="0 0 -0.15"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+  <!-- 后右腿 -->
+  <link name="RR_thigh">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.15"/>
+      </geometry>
+      <origin xyz="0 0 -0.075" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="RR_hip" type="revolute">
+    <parent link="base_link"/>
+    <child link="RR_thigh"/>
+    <origin xyz="-0.15 -0.1 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.8" upper="0.8" effort="100" velocity="10"/>
+  </joint>
+  
+  <link name="RR_calf">
+    <visual>
+      <geometry>
+        <box size="0.04 0.04 0.12"/>
+      </geometry>
+      <origin xyz="0 0 -0.06" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+  </link>
+  
+  <joint name="RR_knee" type="revolute">
+    <parent link="RR_thigh"/>
+    <child link="RR_calf"/>
+    <origin xyz="0 0 -0.15"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.2" upper="0.2" effort="100" velocity="10"/>
+  </joint>
+  
+</robot>

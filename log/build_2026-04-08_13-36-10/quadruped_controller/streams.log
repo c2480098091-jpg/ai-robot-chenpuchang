@@ -1,0 +1,58 @@
+[0.489s] Invoking command in '/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller': PYTHONPATH=/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build
+[0.635s] running develop
+[0.715s] Removing /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped-controller.egg-link (link to .)
+[0.732s] Invoked command in '/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller' returned '0': PYTHONPATH=/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --uninstall --editable --build-directory /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build
+[0.734s] Invoking command in '/home/chenpuuuu/ai-robot-chenpuchang/quadruped_controller': PYTHONPATH=/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/quadruped_controller build --build-base /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build install --record /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/install.log --single-version-externally-managed install_data --force
+[0.867s] running egg_info
+[0.868s] writing ../build/quadruped_controller/quadruped_controller.egg-info/PKG-INFO
+[0.868s] writing dependency_links to ../build/quadruped_controller/quadruped_controller.egg-info/dependency_links.txt
+[0.868s] writing entry points to ../build/quadruped_controller/quadruped_controller.egg-info/entry_points.txt
+[0.868s] writing requirements to ../build/quadruped_controller/quadruped_controller.egg-info/requires.txt
+[0.868s] writing top-level names to ../build/quadruped_controller/quadruped_controller.egg-info/top_level.txt
+[0.870s] reading manifest file '../build/quadruped_controller/quadruped_controller.egg-info/SOURCES.txt'
+[0.871s] writing manifest file '../build/quadruped_controller/quadruped_controller.egg-info/SOURCES.txt'
+[0.871s] running build
+[0.871s] running build_py
+[0.871s] creating /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build
+[0.872s] creating /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib
+[0.872s] creating /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.872s] copying quadruped_controller/kinematics.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.872s] copying quadruped_controller/move_robot.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.873s] copying quadruped_controller/gait_generator.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.873s] copying quadruped_controller/real_gait.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.873s] copying quadruped_controller/__init__.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.873s] copying quadruped_controller/balance_controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.874s] copying quadruped_controller/controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller
+[0.874s] running install
+[0.874s] running install_lib
+[0.875s] creating /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.875s] copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/kinematics.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.875s] copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/move_robot.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.875s] copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/gait_generator.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.875s] copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/real_gait.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.875s] copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/__init__.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.876s] copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/balance_controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.876s] copying /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build/lib/quadruped_controller/controller.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller
+[0.876s] byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/kinematics.py to kinematics.cpython-310.pyc
+[0.876s] byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/move_robot.py to move_robot.cpython-310.pyc
+[0.876s] byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/gait_generator.py to gait_generator.cpython-310.pyc
+[0.877s] byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/real_gait.py to real_gait.cpython-310.pyc
+[0.877s] byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/__init__.py to __init__.cpython-310.pyc
+[0.877s] byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/balance_controller.py to balance_controller.cpython-310.pyc
+[0.878s] byte-compiling /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller/controller.py to controller.cpython-310.pyc
+[0.878s] running install_data
+[0.878s] copying resource/quadruped_controller -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/ament_index/resource_index/packages
+[0.879s] copying package.xml -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller
+[0.880s] copying urdf/test.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+[0.881s] copying urdf/quadruped.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+[0.882s] copying urdf/quadruped_complete.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+[0.882s] copying urdf/quadruped_real.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+[0.882s] copying urdf/quadruped_working.urdf -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/urdf
+[0.882s] copying launch/display_quadruped.launch.py -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/launch
+[0.884s] copying config/quadruped.rviz -> /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/share/quadruped_controller/config
+[0.884s] running install_egg_info
+[0.886s] Copying ../build/quadruped_controller/quadruped_controller.egg-info to /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages/quadruped_controller-0.0.0-py3.10.egg-info
+[0.886s] running install_scripts
+[0.899s] Installing controller script to /home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/quadruped_controller
+[0.899s] writing list of installed files to '/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/install.log'
+[0.913s] Invoked command in '/home/chenpuuuu/ai-robot-chenpuchang/quadruped_controller' returned '0': PYTHONPATH=/home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/chenpuuuu/ai-robot-chenpuchang/install/quadruped_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/quadruped_controller build --build-base /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/build install --record /home/chenpuuuu/ai-robot-chenpuchang/build/quadruped_controller/install.log --single-version-externally-managed install_data --force
