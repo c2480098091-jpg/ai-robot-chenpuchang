@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI机器人课程 - chenpuchang</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #24292e;
+            background: #f6f8fa;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+        }
+
+        .card h2 {
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .info-item {
+            padding: 10px;
+            background: #f6f8fa;
+            border-radius: 5px;
+        }
+
+        .info-item strong {
+            color: #667eea;
+        }
+
+        .week-list {
+            list-style: none;
+        }
+
+        .week-list li {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background: #f6f8fa;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            transition: all 0.2s;
+        }
+
+        .week-list li:hover {
+            background: #eef1f5;
+            transform: translateX(5px);
+        }
+
+        .week-list a {
+            color: #0366d6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .week-list a:hover {
+            text-decoration: underline;
+        }
+
+        .week-num {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 2px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 10px;
+        }
+
+        code {
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 0.9em;
+        }
+
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-size: 0.9em;
+            margin: 10px 0;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        .footer a {
+            color: #667eea;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+        }
+
+        .status-done {
+            background: #dcffe4;
+            color: #22863a;
+        }
+
+        .status-ongoing {
+            background: #fff5b1;
+            color: #735c0f;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e1e4e8;
+            margin: 20px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border: 1px solid #e1e4e8;
+        }
+
+        th {
+            background: #f6f8fa;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f6f8fa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==================== 头部 ==================== -->
+    <div class="container">
+        <div class="header">
+            <h1>🤖 AI机器人课程</h1>
+            <p>作业提交与项目展示 | 陈朴昌</p>
+        </div>
+
+        <!-- ==================== 基本信息 ==================== -->
+        <div class="card">
+            <h2>👤 基本信息</h2>
+            <div class="info-grid">
+                <div class="info-item"><strong>姓名：</strong>chenpuchang</div>
+                <div class="info-item"><strong>学号：</strong>20221922</div>
+                <div class="info-item"><strong>日期：</strong>2026-03-18</div>
+                <div class="info-item"><strong>课程：</strong>AI机器人基础与实践</div>
+            </div>
+        </div>
+
+        <!-- ==================== 实验目标 ==================== -->
+        <div class="card">
+            <h2>🧠 实验目标</h2>
+            <ol>
+                <li>完成机器人开发环境搭建</li>
+                <li>熟悉 ROS2 基本使用流程</li>
+                <li>掌握 Python 基础运行与环境管理</li>
+                <li>能够运行 turtlesim 示例程序</li>
+                <li>理解 ROS2 节点与通信的基本概念</li>
+            </ol>
+        </div>
+
+        <!-- ==================== 环境信息 ==================== -->
+        <div class="card">
+            <h2>💻 环境信息</h2>
+            <table>
+                <tr><th>项目</th><th>配置</th></tr>
+                <tr><td>🖥 操作系统</td><td>Windows 11 + WSL2 / Ubuntu 22.04</td></tr>
+                <tr><td>🤖 ROS2版本</td><td>ROS2 Humble</td></tr>
+                <tr><td>🐍 Python版本</td><td>Python 3.10 / 3.11</td></tr>
+                <tr><td>🧰 开发工具</td><td>VSCode / Terminal / Bash / Colcon</td></tr>
+            </table>
+        </div>
+
+        <!-- ==================== 安装说明 ==================== -->
+        <div class="card">
+            <h2>⚙️ 安装系统与依赖</h2>
+            <h3>1️⃣ Python 环境</h3>
+            <p>安装 Python3，验证版本：</p>
+            <pre><code>python3 --version</code></pre>
+        </div>
+
+        <!-- ==================== 课程作业目录 ==================== -->
+        <div class="card">
+            <h2>📚 课程作业目录</h2>
+            <ul class="week-list">
+                <li>
+                    <span class="week-num">Week 2</span>
+                    <a href="week2/">WSL、Ubuntu 与 ROS2 环境配置</a>
+                    <span class="status-badge status-done">✅ 完成</span>
+                </li>
+                <li>
+                    <span class="week-num">Week 3</span>
+                    <a href="week3/">GitHub SSH、VS Code 与 ROS2 交互</a>
+                    <span class="status-badge status-done">✅ 完成</span>
+                </li>
+                <li>
+                    <span class="week-num">Week 4</span>
+                    <a href="week4/">命令行、机器人基础与 Python 仿真</a>
+                    <span class="status-badge status-done">✅ 完成</span>
+                </li>
+                <li>
+                    <span class="week-num">Week 5</span>
+                    <a href="week5/">Linux 目录操作与机器人运动学</a>
+                    <span class="status-badge status-done">✅ 完成</span>
+                </li>
+                <li>
+                    <span class="week-num">Week 6</span>
+                    <a href="week6/">传感器介绍与 ROS2 KITTI 实验</a>
+                    <span class="status-badge status-done">✅ 完成</span>
+                </li>
+                <li>
+                    <span class="week-num">Week 7</span>
+                    <a href="week7/">Markdown 与 GitHub 作业整理</a>
+                    <span class="status-badge status-done">✅ 完成</span>
+                </li>
+                <li>
+                    <span class="week-num">Week 8</span>
+                    <a href="week8/">Docker 安装与 ROS2 桌面容器</a>
+                    <span class="status-badge status-done">✅ 完成</span>
+                </li>
+                <li>
+                    <span class="week-num">Week 10</span>
+                    <a href="week10/">Docker 概念与 OpenCV 实验</a>
+                    <span class="status-badge status-ongoing">🔄 进行中</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- ==================== 项目说明 ==================== -->
+        <div class="card">
+            <h2>📖 项目说明</h2>
+            <p>本项目使用 <strong>GitHub Pages</strong> 自动部署。</p>
+            <p>在线访问：<a href="https://c2480098091-jpg.github.io/ai-robot-chenpuchang/">https://c2480098091-jpg.github.io/ai-robot-chenpuchang/</a></p>
+            <hr>
+            <p>📂 GitHub 仓库：<a href="https://github.com/c2480098091-jpg/ai-robot-chenpuchang">github.com/c2480098091-jpg/ai-robot-chenpuchang</a></p>
+        </div>
+
+        <!-- ==================== 页脚 ==================== -->
+        <div class="footer">
+            <p>© 2026 chenpuchang | AI机器人课程作业</p>
+            <p>Powered by <a href="https://pages.github.com/">GitHub Pages</a></p>
+        </div>
+    </div>
+
+</body>
+</html>
